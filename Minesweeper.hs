@@ -104,9 +104,6 @@ percorreTabuleiro2 (Tabuleiro tabuleiro) contador posicao = loop tabuleiro conta
 novoTabuleiro :: Tabuleiro                                                    --Criacao do tabuleiro de celulas
 novoTabuleiro = Tabuleiro {celulas = [novaCelula| i <- [1..20], j <- [1..20]]}
 
-buildTabuleiro :: StdGen -> Tabuleiro
-buildTabuleiro rng = setValor $ bombasAleatorias novoTabuleiro 40 rng         -- Criacao do tabuleiro
-
 bombasAleatorias :: Tabuleiro -> Int -> StdGen -> Tabuleiro                       --Colocar bombas no tabuleiro
 bombasAleatorias tabuleiro qnt gen = let
                                   loop x _ 0 = x
