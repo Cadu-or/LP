@@ -37,7 +37,7 @@ O jogador digita uma posição seguindo o padrão "(x, y)", caso o padrão não 
 ### Regras:
 O tabuleiro possui 3 tipos de célula, branco, número e mina.
 
-É aberta uma célula do tabuleiro por vez. 
+É aberto uma célula do tabuleiro por vez. 
 
 Caso a célula seja em **branco** todas as células em branco adjacentes serão abertas, **número** significa que existe uma quatidade de bombas igual a aquele número em volta daquela célula e se for uma **mina**, o usuário perderá o jogo instantâneamente.
 
