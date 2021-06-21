@@ -1,4 +1,4 @@
-# Linguagem de Programação - Universidade de Brasíla (2019/2)
+# Linguagens de Programação - Universidade de Brasília (2019/2)
 Este repositório contém o trabalho final da disciplina.
 
 ## Alunos:
