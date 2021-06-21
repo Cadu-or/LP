@@ -35,9 +35,9 @@ O jogo possui um tabuleiro de 20x20 com 40 minas espalhadas randomicamente (segu
 O jogador digita uma posição seguindo o padrão "(x, y)", caso o padrão não seja seguido o programa parará sua execução e um novo jogo terá de ser aberto.
 
 ### Regras:
-O tabuleiro possui 3 tipos de célula, branco, número e mina.
+É aberto uma célula do tabuleiro por vez.
 
-É aberto uma célula do tabuleiro por vez. 
+O tabuleiro possui 3 tipos de célula, branco, número e mina. 
 
 Caso a célula seja em **branco** todas as células em branco adjacentes serão abertas, **número** significa que existe uma quatidade de bombas igual a aquele número em volta daquela célula e se for uma **mina**, o usuário perderá o jogo instantâneamente.
 
