@@ -3,24 +3,29 @@ module Data_Instance where
 import Data.List
 import Data.Char
 
+-- Valor da celula pode ser bomba ou valor inteiro sendo em branco o valor 0.
 data ValorCelula = Bomba | Numero Int deriving (Eq)
 
-data Celula = Celula{        -- Especificacao das celulas, seus valores
+-- Especificacao das celulas, seus valores
+data Celula = Celula{
   valor :: ValorCelula,
   fechado :: Bool
 } deriving (Eq)
 
-data Tabuleiro = Tabuleiro{        -- Especificacao do teclado como lista dde celulas 
+-- Especificacao do tabuleiro como lista de celulas 
+data Tabuleiro = Tabuleiro{
   celulas :: [Celula]
 } deriving (Eq)
 
-instance Show Celula where -- Funcao para especificar o print de cada celula
+-- Instance para o print de cada celula
+instance Show Celula where
   show Celula { fechado = True } = " # "
   show Celula { fechado = False, valor = (Numero 0)} = "   "
   show Celula { valor = Bomba } = " * "
   show Celula { valor = (Numero x) } = " " ++ show x ++ " "
 
-instance Show Tabuleiro where -- Instancia para printar o tabuleiro
+-- Instancia para printar o tabuleiro
+instance Show Tabuleiro where
   show b = showTopo 20 ++ showCelulas (celulas b) 0 where
     linha n = ' ' : show n
     showTopo n = "\n\n  " ++ foldl' (\a b -> a ++ linha b ++ " ") "  " [0..9] ++ foldl' (\a b -> a ++ linha b ++ " ") "" [0..9] ++ "\n" --printa a primeira linha com os numeros de indicacao de colunas
